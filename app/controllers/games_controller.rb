@@ -23,7 +23,7 @@ class GamesController < ApplicationController
     @word_array_const = @word.split(//)
     @letters.each do |letter|
       if @word_array.include?(letter)
-        @word_array.delete_at(0)
+        @word_array.slice(letter)
       end
     end
 
